@@ -1,0 +1,17 @@
+<div class="editor-inner">
+	<div class="group">
+		<label for="bgColor">Background Color:</label>
+		<input [(colorPicker)]="color" (colorPickerChange)="changeColor()" [style.background]="color" [value]="color"/>
+	</div>
+	<div class="group">
+		<label for="size">Size:</label>
+		<input type="text" name="size" (input)="changeSize($event)" [value]="size">px
+		<input type="range" class="zip" name="sizeZip" min="50" max="300" value="150" (change)="changeSize($event)">
+	</div>
+	<div class="group">
+		<label for="borderRadius">Border Radius:</label>
+		<input type="text" name="borderRadius" (input)="changeRadius($event)" [value]="borderRadius">px
+		<input type="range" class="zip" name="radiusZip" min="0" max="150" value="0" (change)="changeRadius($event)">
+	</div>
+	<button (click)="save()">Save</button>
+</div>

@@ -1,0 +1,5 @@
+<div class="gallery-inner">
+	<div class="gallery-item" *ngFor="let item of galleryArray;let index = index" [style.background-color]="item.color" [style.width]="item.size+'px'" [style.height]="item.size+'px'" [style.border-radius]="item.radius+'px'" (click)="remove(index)">
+		
+	</div>
+</div>
